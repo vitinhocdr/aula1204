@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularios</title>
+    <title>Formulários</title>
   </head>
   <body>
-    <h1>Formulario</h1>
-    <form>
-      <input name="email" placeholder="Login" />
-      <input name="senha" placeholder="Digite sua senha aqui" />
-      <select name="papel">
-        <option>Administrador</option>
-        <option>Usuario Comum</option>
-      </select>
-      <input type="submit" value="Enviar" />
-    </form>
+    <div class="container">
+      <h1>Entrar no Sistema IFSC</h1>
+      <form
+        name="loginForm"
+        method="post"
+        action="https://sigaa.ifsc.edu.br/sigaa/logar.do?dispatch=logOn"
+      >
+        <input type="text" name="user.login" placeholder="Login" />
+        <input
+          type="pass"
+          name="user.senha"
+          placeholder="Digite sua senha aqui"
+        />
+        <select name="papel">
+          <option value="0">Administrador</option>
+          <option value="1">Usuário Comum</option>
+        </select>
+        <input type="submit" value="Entrar" />
+      </form>
+    </div>
   </body>
 </html>
